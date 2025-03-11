@@ -50,3 +50,31 @@
             <p id="output-text"></p>
         </div>
     </div>
+    <script>
+        document.getElementById('input-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var fastingbloodsugarlevel = parseFloat(document.getElementById('fastingbloodsugarlevel').value);
+
+              var outputMessage = "";
+            if (age < 0 || isNaN(age)) {
+                outputMessage += "Invalid age. <br>";
+            }
+
+            if (fastingbloodsugarlevel< 5.7) {
+                outputMessage += "Your blood sugar level is normal. <br>";
+            } else if (fastingbloodsugarlevel< 6.5) {
+                outputMessage += "Your on prediabetes level .It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (fastingbloodsugarlevel > 6.5) {
+                outputMessage += "Your felt on diabetics.It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            document.getElementById('output-text').innerHTML = outputMessage;
+            document.getElementById('output-container').style.display = "block";
+        });
+    </script>
+</body>
+</html>
