@@ -106,3 +106,128 @@
             <p id="output-text"></p>
         </div>
     </div>
+    <script>
+        document.getElementById('input-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var color  = document.getElementById('color').value;
+            var clarity  = document.getElementById('clarity').value;
+            var Specificgravity  = parseFloat(document.getElementById('Specificgravity').value);
+            var pH  = parseFloat(document.getElementById('pH').value);
+            var Redbloodcells  = parseFloat(document.getElementById('Redbloodcells').value);
+            var Whitebloodcells  = parseFloat(document.getElementById('Whitebloodcells').value);
+            var Protein  = parseFloat(document.getElementById('Protein').value);
+            var Glucose  = parseFloat(document.getElementById('Glucose').value);
+            var Urobilinogen  = parseFloat(document.getElementById('Urobilinogen').value);
+            var Bilirubin  = document.getElementById('Bilirubin').value;
+            var Ketonebodies  = document.getElementById('Ketonebodies').value;
+            var Leukocyteesterase  = document.getElementById('Leukocyteesterase').value;
+            var Nitrites  = document.getElementById('Nitrites').value;
+
+            var outputMessage = "";
+            if (age < 0 || isNaN(age)) {
+                outputMessage += "Invalid age. <br>";
+            }
+
+            if (color === 'Yellow'){
+                outputMessage += "This is the normal range for urine color . <br>";
+            } else if(color === 'Redorpink'){
+                outputMessage += "This can be caused by blood in the urine. It's crucial to consult a doctor for further evaluation . <br>";
+            } else if(color === 'Brown'){
+                outputMessage += "This can indicate dehydration, liver problems, or certain medications. It's crucial to consult a doctor for further evaluation . <br>";
+            }
+
+            if (clarity === 'Clear'){
+                outputMessage += "This is the normal range for urine clarity . <br>";
+            } else if(clarity === 'Cloudy'){
+                outputMessage += " It's crucial to consult a doctor for further evaluation . <br>";
+            } else if(clarity === 'Turbid'){
+                outputMessage += "It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if ( Specificgravity < 1.0005) {
+                outputMessage += "Your Specific gravity  is low. It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (Specificgravity < 1.0030) {
+                outputMessage += "Your Specific gravity level is normal. <br>";
+            } else if (Specificgravity > 1.0030) {
+                outputMessage += "Your Specific gravity is high. It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if ( pH < 4.5) {
+                outputMessage += "Your urin pH  is low. It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (pH < 8.0) {
+                outputMessage += "Your urine pH level is normal. <br>";
+            } else if (pH > 8.0) {
+                outputMessage += "Your urine pH is high. It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if (Redbloodcells < 2) {
+                outputMessage += "Your urine Red blood cells level is normal. <br>";
+            } else if (Redbloodcells > 2) {
+                outputMessage += "Your urine Red blood cells level is high.It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if (Whitebloodcells < 2) {
+                outputMessage += "Your urine White blood cells level is low.It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (Whitebloodcells < 5) {
+                outputMessage += "Your urine White blood cells level is normal. <br>";
+            } else if (Whitebloodcells > 5){
+                outputMessage += "Your urine White blood cells level is high.It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if (Protein < 150) {
+                outputMessage += "Your urine Protein level is normal. <br>";
+            } else if (Protein > 150) {
+                outputMessage += "Your urine Protein is high.It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if (Glucose < 130) {
+                outputMessage += "Your urine Glucose level is normal. <br>";
+            } else if (Glucose > 130) {
+                outputMessage += "Your urine Glucose is high.It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if (Urobilinogen < 0.5) {
+                outputMessage += "Your urine Urobilinogen level is low.It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (Urobilinogen < 1) {
+                outputMessage += "Your urine Urobilinogen level is normal. <br>";
+            } else if (Urobilinogen > 1){
+                outputMessage += "Your urine Urobilinogen level is high.It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if (Bilirubin === 'Negative'){
+                outputMessage += "This is the normal  for urine Bilirubin . <br>";
+            } else if(Bilirubin === 'Positive'){
+                outputMessage += " It's crucial to consult a doctor for further evaluation . <br>";
+            } 
+
+            if (Ketonebodies === 'Negative'){
+                outputMessage += "This is the normal for urine Ketone bodies . <br>";
+            } else if(Ketonebodies === 'Trace'){
+                outputMessage += " It's crucial to consult a doctor for further evaluation . <br>";
+            } else if(Ketonebodies === 'Small'){
+                outputMessage += "It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if (Leukocyteesterase === 'Negative'){
+                outputMessage += "This is the normal for urine Leukocyte esterase . <br>";
+            } else if(Leukocyteesterase === 'Positive'){
+                outputMessage += " It's crucial to consult a doctor for further evaluation . <br>";
+            } 
+
+            if (Nitrites === 'Negative'){
+                outputMessage += "This is the normal for urine Nitrites . <br>";
+            } else if(Nitrites === 'Positive'){
+                outputMessage += " It's crucial to consult a doctor for further evaluation . <br>";
+            } 
+
+            document.getElementById('output-text').innerHTML = outputMessage;
+            document.getElementById('output-container').style.display = "block";
+        });
+    </script>
+</body>
+</html>
+
