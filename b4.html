@@ -69,3 +69,86 @@
             <p id="output-text"></p>
         </div>
     </div>
+    <script>
+        document.getElementById('input-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var Alaninetransaminase  = parseFloat(document.getElementById('Alaninetransaminase').value);
+            var Aspartatetransaminase  = parseFloat(document.getElementById('Aspartatetransaminase').value);
+            var Alkalinephosphatase  = parseFloat(document.getElementById('Alkalinephosphatase').value);
+            var Bilirubin  = parseFloat(document.getElementById('Bilirubin').value);
+            var DirectBilirubin  = parseFloat(document.getElementById('DirectBilirubin').value);
+            var Prothrombintime  = parseFloat(document.getElementById('Prothrombintime').value);
+            var Albumin  = parseFloat(document.getElementById('Albumin').value);
+
+            var outputMessage = "";
+            if (age < 0 || isNaN(age)) {
+                outputMessage += "Invalid age. <br>";
+            }
+
+            if ( Alaninetransaminase < 4) {
+                outputMessage += "Your Alanine transaminase  is low. Please meet your doctor. <br>";
+            } else if (Alaninetransaminase < 36) {
+                outputMessage += "Your Alanine transaminase level is good. <br>";
+            }else if (Alaninetransaminase > 36) {
+                outputMessage += "Your Alanine transaminase is high. Please meet your doctor. <br>";
+            }
+
+            if ( Aspartatetransaminase < 5) {
+                outputMessage += "Your Aspartate transaminase  is low. Please meet your doctor. <br>";
+            } else if (Aspartatetransaminase < 30) {
+                outputMessage += "Your Aspartate transaminase level is good. <br>";
+            }else if (Aspartatetransaminase > 30) {
+                outputMessage += "Your Aspartate transaminase is high. Please meet your doctor. <br>";
+            }
+
+            if ( Alkalinephosphatase < 30) {
+                outputMessage += "Your Alkaline phosphatase  is low. Please meet your doctor. <br>";
+            } else if (Alkalinephosphatase < 120) {
+                outputMessage += "Your Alkaline phosphatase level is good. <br>";
+            }else if (Alkalinephosphatase > 120) {
+                outputMessage += "Your Alkaline phosphatase is high. Please meet your doctor. <br>";
+            }
+
+            if ( Bilirubin < 2) {
+                outputMessage += "Your Bilirubin  is low. Please meet your doctor. <br>";
+            } else if (Bilirubin < 17) {
+                outputMessage += "Your Bilirubin level is good. <br>";
+            } else if (Bilirubin > 17) {
+                outputMessage += "Your Bilirubin is high. Please meet your doctor. <br>";
+            }
+
+            if ( DirectBilirubin < 0) {
+                outputMessage += "Your Direct Bilirubin  is low. Please meet your doctor. <br>";
+            } else if (DirectBilirubin < 6) {
+                outputMessage += "Your Direct Bilirubin level is good. <br>";
+            } else if (DirectBilirubin > 6) {
+                outputMessage += "Your Direct Bilirubin is high. Please meet your doctor. <br>";
+            }
+
+            if (Prothrombintime < 10.9) {
+                outputMessage += "Your Prothrombintime  is low. Please meet your doctor. <br>";
+            } else if (Prothrombintime < 12.5) {
+                outputMessage += "Your Prothrombintime is good. <br>";
+            } else if (Prothrombintime > 12.5) {
+                outputMessage += "Your Prothrombintime is high. Please meet your doctor. <br>";
+            }
+
+            if (Albumin < 35) {
+                outputMessage += "Your Albumin  is low. Please meet your doctor. <br>";
+            } else if (Albumin < 50) {
+                outputMessage += "Your Albumin is good. <br>";
+            } else if (Albumin > 50) {
+                outputMessage += "Your Albumin is high. Please meet your doctor. <br>";
+            }
+
+            document.getElementById('output-text').innerHTML = outputMessage;
+            document.getElementById('output-container').style.display = "block";
+        });
+    </script>
+</body>
+</html>
+
