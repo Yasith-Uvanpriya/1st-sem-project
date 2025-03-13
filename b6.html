@@ -56,3 +56,23 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
+        <div id="output-container" class="output-container" style="display: none;">
+            <h2>Result</h2>
+            <p id="output-text"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('input-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var ThyroidStimulatingHormone  = parseFloat(document.getElementById('ThyroidStimulatingHormone').value);
+            var FreeThyroxine  = parseFloat(document.getElementById('FreeThyroxine').value);
+            var TotalThyroxine  = parseFloat(document.getElementById('TotalThyroxine').value);
+            var FreeTriiodothyronine  = parseFloat(document.getElementById('FreeTriiodothyronine').value);
+            var TotalTriiodothyronine  = parseFloat(document.getElementById('TotalTriiodothyronine').value);
+            
+            
