@@ -76,3 +76,54 @@
             var TotalTriiodothyronine  = parseFloat(document.getElementById('TotalTriiodothyronine').value);
             
             
+            var outputMessage = "";
+            if (age < 0 || isNaN(age)) {
+                outputMessage += "Invalid age. <br>";
+            }
+
+            if ( ThyroidStimulatingHormone < 0.4) {
+                outputMessage += "Your Thyroid-Stimulating Hormone (TSH)  is low. It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (ThyroidStimulatingHormone < 4.0) {
+                outputMessage += "Your Thyroid-Stimulating Hormone (TSH) level is normal. <br>";
+            } else if (ThyroidStimulatingHormone > 4.0) {
+                outputMessage += "Your Thyroid-Stimulating Hormone (TSH) is high. It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if ( FreeThyroxine < 0.9) {
+                outputMessage += "Your Free Thyroxine  is low. It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (FreeThyroxine < 1.8) {
+                outputMessage += "Your Free Thyroxine level is normal. <br>";
+            } else if (FreeThyroxine > 1.8) {
+                outputMessage += "Your Free Thyroxine is high. It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if ( TotalThyroxine < 4.5) {
+                outputMessage += "Your Total Thyroxine (T4)  is low. It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (TotalThyroxine < 12) {
+                outputMessage += "Your Total Thyroxine (T4) level is normal. <br>";
+            } else if (TotalThyroxine > 12) {
+                outputMessage += "Your Total Thyroxine (T4) is high. It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if ( FreeTriiodothyronine < 2.3) {
+                outputMessage += "Your Free Triiodothyronine (FT3)  is low. It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (FreeTriiodothyronine < 4.2) {
+                outputMessage += "Your Free Triiodothyronine (FT3) level is normal. <br>";
+            } else if (FreeTriiodothyronine > 4.2) {
+                outputMessage += "Your Free Triiodothyronine (FT3) is high. It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            if ( TotalTriiodothyronine < 80) {
+                outputMessage += "Your Total Triiodothyronine (T3)  is low. It's crucial to consult a doctor for further evaluation. <br>";
+            } else if (TotalTriiodothyronine < 200) {
+                outputMessage += "Your Total Triiodothyronine (T3) level is normal. <br>";
+            } else if (TotalTriiodothyronine > 200) {
+                outputMessage += "Your Total Triiodothyronine (T3) is high. It's crucial to consult a doctor for further evaluation. <br>";
+            }
+
+            document.getElementById('output-text').innerHTML = outputMessage;
+            document.getElementById('output-container').style.display = "block";
+        });
+    </script>
+</body>
+</html>
