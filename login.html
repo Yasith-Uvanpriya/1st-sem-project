@@ -41,3 +41,28 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
+
+        <div id="output-container" class="output-container" style="display: none;">
+            <h2>Result</h2>
+            <p id="output-text"></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('input-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            var password = document.getElementById('password').value;
+            var repassword = document.getElementById('repassword').value;
+
+            if (password !== repassword) {
+                document.getElementById('output-text').textContent = "Password and re-password do not match. Please try again.";
+            } else {
+                document.getElementById('output-text').textContent = "Login successful.";
+            }
+            
+            // Show the result container
+            document.getElementById('output-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
