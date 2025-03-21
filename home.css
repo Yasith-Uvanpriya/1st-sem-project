@@ -48,3 +48,18 @@ nav a {
     justify-content: space-between;
     margin-bottom: 100px; /* Adjust spacing between rows */
 }
+
+button {
+    border: none;
+    background-color: rgba(5, 189, 240, 0.5); /* Transparent blue color */
+    width: 250px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    font-size: 16px;
+    color: #030000; /* Text color */
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 50px; 
+    margin-right: 50px;
+}
