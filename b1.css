@@ -41,3 +41,56 @@ nav a {
     font-weight: bold;
     font-size: 16px;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 255, 0.5); /* Blue transparent background */
+    padding: 80px;
+    border-radius: 100px;
+    text-align: center;
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #faf8f8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.output-container {
+    background-color: rgba(0, 0, 255, 0.5); /* Blue transparent background */
+    padding: 80px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto;
+}
