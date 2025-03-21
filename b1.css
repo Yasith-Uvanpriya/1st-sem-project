@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('2.jpg');
+    background-size: cover;
+    background-position: top center; /* Adjusted */
+    background-attachment: fixed; /* Keeps background fixed while content scrolls */
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    padding: 15px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000000;
+}
+
+.logo img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f7eeee;
+    font-weight: bold;
+    font-size: 16px;
+}
